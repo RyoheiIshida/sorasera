@@ -81,18 +81,35 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // モバイルメニューの簡易実装
+    // モバイルメニューの実装
     const nav = document.querySelector('.nav');
-    if (window.innerWidth <= 768) {
-        navItems.forEach(item => {
-            item.addEventListener('click', function() {
-                // リンク後にアクティブ状態を更新
-                setTimeout(() => {
-                    window.dispatchEvent(new Event('scroll'));
-                }, 100);
-            });
+    const navToggle = document.querySelector('.nav-toggle');
+
+    function closeMobileMenu() {
+        nav.classList.remove('open');
+        if (navToggle) {
+            navToggle.setAttribute('aria-expanded', 'false');
+        }
+    }
+
+    if (navToggle && nav) {
+        navToggle.addEventListener('click', function() {
+            nav.classList.toggle('open');
+            const expanded = nav.classList.contains('open');
+            navToggle.setAttribute('aria-expanded', expanded.toString());
         });
     }
+
+    navItems.forEach(item => {
+        item.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                closeMobileMenu();
+            }
+            setTimeout(() => {
+                window.dispatchEvent(new Event('scroll'));
+            }, 100);
+        });
+    });
 });
 
 // ページの先頭へ戻るボタンの追加関数
