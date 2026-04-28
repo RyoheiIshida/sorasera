@@ -573,15 +573,15 @@ body {
     border: 2px solid transparent;
 }
 
-.line-btn {
-    background-color: #00B900;
+.instagram-btn {
+    background-color: #E1306C;
     color: var(--white);
 }
 
-.line-btn:hover {
-    background-color: #009000;
+.instagram-btn:hover {
+    background-color: #C13584;
     transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0, 185, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(225, 48, 108, 0.3);
 }
 
 .email-btn {

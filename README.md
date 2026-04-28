@@ -67,11 +67,11 @@ git push origin main
 `index.html` の以下の部分を編集してください：
 
 ```html
-<a href="https://line.me" class="contact-btn line-btn">LINEでお問い合わせ</a>
+<a href="https://www.instagram.com/sorasera2026/" class="contact-btn instagram-btn">インスタグラムでお問い合わせ</a>
 <a href="mailto:contact@example.com" class="contact-btn email-btn">メールでお問い合わせ</a>
 ```
 
-- `https://line.me` を実際のLINE公式アカウントのURLに変更
+- `https://www.instagram.com/sorasera2026/` を実際のインスタグラムアカウントのURLに変更
 - `contact@example.com` を実際のメールアドレスに変更
 
 ### 色の変更
